@@ -1,0 +1,6 @@
+﻿{
+  "DataConnectionString": "Data Source=SQL5102.site4now.net;Initial Catalog=db_a6d700_n430_1;User Id=db_a6d700_n430_1_admin;Password=bitcoinminer1234",
+  "DataProvider": "sqlserver",
+  "SQLCommandTimeout": null,
+  "RawDataSettings": {}
+}

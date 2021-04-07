@@ -16299,6 +16299,9 @@
   <LocaleResource Name="Homepage">
     <Value>Home page</Value>
   </LocaleResource>
+  <LocaleResource Name="Landingpage">
+    <Value>Landing page</Value>
+  </LocaleResource>
   <LocaleResource Name="Homepage.Products">
     <Value>Featured products</Value>
   </LocaleResource>

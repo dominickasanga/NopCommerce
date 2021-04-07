@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Payment methods",
+  "FriendlyName": "Mobile money payment",
+  "SystemName": "Payments.Trial",
+  "Version": "1.0",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "Dominic Kasanga",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Payments.Trial.dll",
+  "Description": "This plugin enables Mobile money payment"
+}
