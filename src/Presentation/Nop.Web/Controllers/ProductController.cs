@@ -63,7 +63,10 @@ namespace Nop.Web.Controllers
         #endregion
 
         #region Ctor
-
+        public ProductController()
+        {
+            
+        }
         public ProductController(CaptchaSettings captchaSettings,
             CatalogSettings catalogSettings,
             IAclService aclService,

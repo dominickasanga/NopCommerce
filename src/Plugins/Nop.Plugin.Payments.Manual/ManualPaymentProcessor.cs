@@ -210,11 +210,9 @@ namespace Nop.Plugin.Payments.Manual
             var validator = new PaymentInfoValidator(_localizationService);
             var model = new PaymentInfoModel
             {
-                CardholderName = form["CardholderName"],
+                //CardholderName = form["CardholderName"],
                 CardNumber = form["CardNumber"],
-                CardCode = form["CardCode"],
-                ExpireMonth = form["ExpireMonth"],
-                ExpireYear = form["ExpireYear"]
+                CardCode = form["CardCode"]
             };
             var validationResult = validator.Validate(model);
             if (!validationResult.IsValid)

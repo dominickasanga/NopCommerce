@@ -17,12 +17,12 @@ namespace Nop.Plugin.Payments.Manual.Validators
             //RuleFor(x => x.CardNumber).NotEmpty().WithMessage(localizationService.GetResource("Payment.CardNumber.Required"));
             //RuleFor(x => x.CardCode).NotEmpty().WithMessage(localizationService.GetResource("Payment.CardCode.Required"));
 
-            RuleFor(x => x.CardholderName).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.CardholderName.Required"));
+            //RuleFor(x => x.CardholderName).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.CardholderName.Required"));
             RuleFor(x => x.CardNumber).IsCreditCard().WithMessageAwait(localizationService.GetResourceAsync("Payment.CardNumber.Wrong"));
             RuleFor(x => x.CardCode).Matches(@"^[0-9]{3,4}$").WithMessageAwait(localizationService.GetResourceAsync("Payment.CardCode.Wrong"));
-            RuleFor(x => x.ExpireMonth).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.ExpireMonth.Required"));
-            RuleFor(x => x.ExpireYear).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.ExpireYear.Required"));
-            RuleFor(x => x.ExpireMonth).Must((x, context) =>
+            //RuleFor(x => x.ExpireMonth).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.ExpireMonth.Required"));
+           // RuleFor(x => x.ExpireYear).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.ExpireYear.Required"));
+          /*  RuleFor(x => x.ExpireMonth).Must((x, context) =>
             {
                 //not specified yet
                 if (string.IsNullOrEmpty(x.ExpireYear) || string.IsNullOrEmpty(x.ExpireMonth))
@@ -36,7 +36,7 @@ namespace Nop.Plugin.Payments.Manual.Validators
                     return false;
 
                 return true;
-            }).WithMessageAwait(localizationService.GetResourceAsync("Payment.ExpirationDate.Expired"));
+            }).WithMessageAwait(localizationService.GetResourceAsync("Payment.ExpirationDate.Expired")); */
         }
     }
 }
