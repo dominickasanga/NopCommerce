@@ -6938,14 +6938,32 @@ pre {
 @media (min-width: 769px) {
 
   .featured-products{
-      width: 80%;
+      width: 72%;
+  }
+
+  .image-slider {
+    float: left;
+    width: 70%;
+    margin: 1%;
+    margin-top: 6.3%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
 @media (min-width: 1000px) {
 
   .featured-products {
-    width: 80%;
+    width: 72%;
+  }
+
+  .image-slider {
+    float: left;
+    width: 70%;
+    margin: 1%;
+    margin-top: 6.3%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 

@@ -6,19 +6,31 @@
 }
 <div class="page home-page">
     <div class="page-body">
-        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageTop })
         @await Component.InvokeAsync("TopicBlock", new { systemName = "HomepageText" })
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeCategories })
-        <div style="float: left; width: auto; margin: 0 0 20px;">
+        <div style="float: left; width: auto; margin: 0 0;">
             @await Component.InvokeAsync("CategoryNavigation")
         </div>
+        <div class="image-slider">
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageTop })
+        </div>
+       
+
+
 
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeCategories })
-        <div style="margin: 0 0 20px; margin-top: 0px; height: 100%; float: left; width: 87%; margin-top: 1%; padding-left: 7%;">
+        <div style="        margin: 0 0 20px;
+        margin-top: 0px;
+        height: 100%;
+        float: left;
+        width: 71%;
+        margin-left: 17%;
+        margin-bottom: -3%;
+        margin-top: -4%;">
             @await Component.InvokeAsync("HomepageCategories")
         </div>
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeProducts })
-        <div class="featured-products" style="margin: 0 0 50px; margin-left: 0px;  margin-left: auto;">
+        <div class="featured-products" style="argin: 0 0 50px; margin-top: 0px; margin-left: 0px; margin-left: 0; margin-left: 17%; margin-top: 40%;">
             @await Component.InvokeAsync("HomepageProducts")
         </div>
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeBestSellers })
