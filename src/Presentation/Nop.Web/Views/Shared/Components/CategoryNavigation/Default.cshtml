@@ -31,7 +31,8 @@
         }
 
         <li class="@liClass">
-            <a href="@Url.RouteUrl("Category", new { SeName = lineModel.Category.SeName })">@lineModel.Category.Name
+
+            <a href="@Url.RouteUrl("Category", new { SeName = lineModel.Category.SeName })" id="@lineModel.Category.Name">@lineModel.Category.Name
                 @if (lineModel.Category.NumberOfProducts.HasValue)
                 {
                     <text> </text>@T("Categories.TotalProducts", lineModel.Category.NumberOfProducts.Value)
@@ -65,7 +66,7 @@
 {
     <div class="block block-category-navigation">
         <div class="title">
-            <strong>@T("Categories")</strong>
+            <strong style=""><h2>@T("Category")</h2></strong>
         </div>
         <div class="listbox">
             <ul class="list">

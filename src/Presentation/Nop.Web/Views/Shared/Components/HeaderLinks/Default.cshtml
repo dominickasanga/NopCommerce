@@ -7,8 +7,8 @@
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderLinksBefore })
         @if (Model.IsAuthenticated)
         {
-            <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account">@T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
-            <li><a href="@Url.RouteUrl("Logout")" class="ico-logout">@T("Account.Logout")</a></li>
+            <li id="topaccountlink"><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account">@T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
+            <li id="toploginlink"><a href="@Url.RouteUrl("Logout")" class="ico-logout">@T("Account.Logout")</a></li>
         }
         else
         {
@@ -18,9 +18,9 @@
 
             @if (Model.RegistrationType != UserRegistrationType.Disabled)
             {
-                <li><a href="@Url.RouteUrl("Register", new { returnUrl })" class="ico-register">@T("Account.Register")</a></li>
+                <li id="topaccountlink"><a href="@Url.RouteUrl("Register", new { returnUrl })" class="ico-register">@T("Account.Register")</a></li>
             }
-            <li><a href="@Url.RouteUrl("Login", new { returnUrl })" class="ico-login">@T("Account.Login")</a></li>
+            <li id="toploginlink"><a href="@Url.RouteUrl("Login", new { returnUrl })" class="ico-login">@T("Account.Login")</a></li>
         }
         @if (Model.AllowPrivateMessages)
         {
@@ -33,7 +33,7 @@
         }
         @if (Model.WishlistEnabled)
         {
-            <li>
+            <li id="topwishlink">
                 <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">
                     <span class="wishlist-label">@T("Wishlist")</span>
                     <span class="wishlist-qty">@T("Wishlist.HeaderQuantity", Model.WishlistItems)</span>

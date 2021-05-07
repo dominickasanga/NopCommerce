@@ -1,7 +1,33 @@
-﻿<div class="header">
+﻿<div class="" style="background: none repeat scroll 0 0 #F0F0E9;">
+ <div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 social-icons-header">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a id="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a id="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+</div>
+<div class="header">
+    
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderBefore })
     <div class="header-upper">
         <div class="header-selectors-wrapper">
+            @await Component.InvokeAsync("Logo")
             @await Component.InvokeAsync("TaxTypeSelector")
             @await Component.InvokeAsync("CurrencySelector")
             @await Component.InvokeAsync("LanguageSelector")
@@ -13,9 +39,13 @@
         </div>
     </div>
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderMiddle })
-    <div class="header-lower">
-        <div class="header-logo">
-            @await Component.InvokeAsync("Logo")
+    <div class="header-lower flex">
+        <div class="header-logo" style="font-size: 18px; color: #555;">
+            <ul>
+                <li id="home_h" class="nav-header-h"><a href="@Url.RouteUrl("Homepage")">@T("Homepage")</a></li>
+                <li id="products_h" class="nav-header-h"><a href="@Url.RouteUrl("NewProducts")">@T("Products.NewProducts")</a></li>
+                <li id="contact_h" class="nav-header-h"><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+            </ul>
         </div>
         <div class="search-box store-search-box">
             @await Component.InvokeAsync("SearchBox")

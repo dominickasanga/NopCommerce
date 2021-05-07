@@ -41,9 +41,9 @@
 	background-color: #fff;
 	font-size: 0;
 }
-.theme-custom .nivo-controlNav a.active {
-	background-color: #4ab2f1;
-}
+  .theme-custom .nivo-controlNav a.active {
+    background-color: #FE980F;
+  }
 
 /* DIRECTIONAL NAVIGATION */
 
@@ -78,7 +78,6 @@
 /* CAPTION */
 
 .theme-custom .nivo-caption {
-	background-color: 333;
 }
 .theme-custom .nivo-caption a {
 	color: #fff;
