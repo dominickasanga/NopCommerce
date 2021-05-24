@@ -39,17 +39,36 @@
         </div>
     </div>
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderMiddle })
-    <div class="header-lower flex">
-        <div class="header-logo" style="font-size: 18px; color: #555;">
-            <ul>
-                <li id="home_h" class="nav-header-h"><a href="@Url.RouteUrl("Homepage")">@T("Homepage")</a></li>
-                <li id="products_h" class="nav-header-h"><a href="@Url.RouteUrl("NewProducts")">@T("Products.NewProducts")</a></li>
-                <li id="contact_h" class="nav-header-h"><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
-            </ul>
-        </div>
+<div class="header-lower flex">
+
+    <div class="header-logo" style="font-size: 18px; color: #555;">
+        <ul id="nav-t">
+            <li class="nav-header-h"><a href="@Url.RouteUrl("Homepage")"><i class="fa-ip fa fa-home"></i>@T("Homepage")</a></li>
+            <li class="nav-header-h"><a href="@Url.RouteUrl("NewProducts")"><i class="fa-ip fa fa-product-hunt"></i>@T("Products.NewProducts")</a></li>
+            <li class="nav-header-h"><a href="@Url.RouteUrl("ContactUs")"><i class="fa-ip fa fa-phone"></i>@T("ContactUs")</a></li>
+        </ul>
+    </div>
+    <div>
         <div class="search-box store-search-box">
             @await Component.InvokeAsync("SearchBox")
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
         </div>
+        <div id="nav-b" class="header-logo hr-r" style="font-size: 18px; color: #555;">
+            <ul class="nav navbar-nav collapse navbar-collapse">
+                <li class="nav-header-h"><a href="@Url.RouteUrl("Homepage")"><i class="fa-ip fa fa-home"></i>@T("Homepage")</a></li>
+                <li class="nav-header-h"><a href="@Url.RouteUrl("NewProducts")"><i class="fa-ip fa fa-product-hunt"></i>@T("Products.NewProducts")</a></li>
+                <li class="nav-header-h"><a href="@Url.RouteUrl("ContactUs")"><i class="fa-ip fa fa-phone"></i>@T("ContactUs")</a></li>
+            </ul>
+        </div>
+
     </div>
+</div>
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderAfter })
 </div>

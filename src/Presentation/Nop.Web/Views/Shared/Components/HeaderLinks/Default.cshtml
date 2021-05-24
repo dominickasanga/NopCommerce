@@ -7,8 +7,8 @@
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderLinksBefore })
         @if (Model.IsAuthenticated)
         {
-            <li id="topaccountlink"><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account">@T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
-            <li id="toploginlink"><a href="@Url.RouteUrl("Logout")" class="ico-logout">@T("Account.Logout")</a></li>
+            <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account"><i class="fa-ip fa fa-user"></i>@T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
+            <li><a href="@Url.RouteUrl("Logout")" class="ico-logout"><i class="fa-ip fa fa-lock"></i>@T("Account.Logout")</a></li>
         }
         else
         {
@@ -18,9 +18,9 @@
 
             @if (Model.RegistrationType != UserRegistrationType.Disabled)
             {
-                <li id="topaccountlink"><a href="@Url.RouteUrl("Register", new { returnUrl })" class="ico-register">@T("Account.Register")</a></li>
+                <li><a href="@Url.RouteUrl("Register", new { returnUrl })" class="ico-register"><i class="fa-ip fa fa-user"></i>@T("Account.Register")</a></li>
             }
-            <li id="toploginlink"><a href="@Url.RouteUrl("Login", new { returnUrl })" class="ico-login">@T("Account.Login")</a></li>
+            <li><a href="@Url.RouteUrl("Login", new { returnUrl })" class="ico-login"><i class="fa-ip fa fa-lock"></i>@T("Account.Login")</a></li>
         }
         @if (Model.AllowPrivateMessages)
         {
@@ -33,18 +33,18 @@
         }
         @if (Model.WishlistEnabled)
         {
-            <li id="topwishlink">
+            <li>
                 <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">
-                    <span class="wishlist-label">@T("Wishlist")</span>
+                    <span class="wishlist-label"><i class="fa-ip fa fa-star"></i>@T("Wishlist")</span>
                     <span class="wishlist-qty">@T("Wishlist.HeaderQuantity", Model.WishlistItems)</span>
                 </a>
             </li>
         }
         @if (Model.ShoppingCartEnabled)
         {
-            <li id="topcartlink">
+            <li>
                 <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart">
-                    <span class="cart-label">@T("ShoppingCart")</span>
+                    <span class="cart-label"><i class="fa-ip fa fa-shopping-cart"></i>@T("ShoppingCart")</span>
                     <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
                 </a>
             </li>
