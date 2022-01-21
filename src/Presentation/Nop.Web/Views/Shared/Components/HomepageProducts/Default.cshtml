@@ -5,17 +5,16 @@
         <div class="left-sidebar1 title">
             <strong><h2>@T("Homepage.Products")</h2></strong>
         </div>
-        <div class="item-grid">
+        <div id="featured_products" class="item-grid">
             @foreach (var item in Model)
             {
-                
-                    <div class="item-box">
-                        @await Html.PartialAsync("_ProductBox", item)
-                    </div>
-                
-                
-
+                <div class="item-box">
+                    @await Html.PartialAsync("_ProductBox", item)
+                </div>
             }
+        </div>
+        <div id="featured_products_show_more" class="show_more" onclick="expandList()">
+            <strong><h2>Click here to view more...</h2></strong>
         </div>
     </div>
 }

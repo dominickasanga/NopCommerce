@@ -211,7 +211,7 @@ namespace Nop.Plugin.Payments.Manual
             var model = new PaymentInfoModel
             {
                 //CardholderName = form["CardholderName"],
-                CardNumber = form["CardNumber"],
+                //CardNumber = form["CardNumber"],
                 CardCode = form["CardCode"]
             };
             var validationResult = validator.Validate(model);
@@ -231,10 +231,10 @@ namespace Nop.Plugin.Payments.Manual
             return Task.FromResult(new ProcessPaymentRequest
             {
                 CreditCardType = form["CreditCardType"],
-                CreditCardName = form["CardholderName"],
-                CreditCardNumber = form["CardNumber"],
-                CreditCardExpireMonth = int.Parse(form["ExpireMonth"]),
-                CreditCardExpireYear = int.Parse(form["ExpireYear"]),
+                //CreditCardName = form["CardholderName"],
+                //CreditCardNumber = form["CardNumber"],
+                //CreditCardExpireMonth = int.Parse(form["ExpireMonth"]),
+               // CreditCardExpireYear = int.Parse(form["ExpireYear"]),
                 CreditCardCvv2 = form["CardCode"]
             });
         }
@@ -271,7 +271,7 @@ namespace Nop.Plugin.Payments.Manual
             //locales
             await _localizationService.AddLocaleResourceAsync(new Dictionary<string, string>
             {
-                ["Plugins.Payments.Manual.Instructions"] = "This payment method stores credit card information in database (it's not sent to any third-party processor). In order to store credit card information, you must be PCI compliant.",
+                ["Plugins.Payments.Manual.Instructions"] = "This plugin enables payments via mobile/phone (stored into database). In order to store credit card information, you must be PCI compliant.",
                 ["Plugins.Payments.Manual.Fields.AdditionalFee"] = "Additional fee",
                 ["Plugins.Payments.Manual.Fields.AdditionalFee.Hint"] = "Enter additional fee to charge your customers.",
                 ["Plugins.Payments.Manual.Fields.AdditionalFeePercentage"] = "Additional fee. Use percentage",

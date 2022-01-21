@@ -20,7 +20,7 @@ namespace Nop.Plugin.Payments.Manual.Models
         [NopResourceDisplayName("Payment.SelectCreditCard")]
         public IList<SelectListItem> CreditCardTypes { get; set; }
 
-        [NopResourceDisplayName("Payment.CardNumber")]
+        [NopResourceDisplayName("Payment.Number")]
         public string CardNumber { get; set; }
 
         /* [NopResourceDisplayName("Payment.CardholderName")]

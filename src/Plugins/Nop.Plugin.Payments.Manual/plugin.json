@@ -1,11 +1,11 @@
 ﻿{
   "Group": "Payment methods",
-  "FriendlyName": "Credit Card",
+  "FriendlyName": "Mobile",
   "SystemName": "Payments.Manual",
-  "Version": "1.55",
+  "Version": "2.1",
   "SupportedVersions": [ "4.40" ],
-  "Author": "nopCommerce team",
+  "Author": "dominickasanga",
   "DisplayOrder": 1,
   "FileName": "Nop.Plugin.Payments.Manual.dll",
-  "Description": "This plugin enables credit card payment (stored into database)"
+  "Description": "This plugin enables payments via mobile/phone (stored into database)"
 }

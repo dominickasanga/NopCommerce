@@ -7,6 +7,14 @@
 <div class="page home-page">
     <div class="page-body">
 
+        
+        <div class="">
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeCategories })
+            <div class="category-nav-">
+                @await Component.InvokeAsync("CategoryNavigation")
+            </div>
+        </div>
+
 
         <div class="image-slider">
             @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageTop })
@@ -26,7 +34,7 @@
                                 <div class="carousel-inner">
                                     <div class="item active firstanimation">
                                         <div class="col-sm-6 slider-text">
-                                            <h1 style="margin-left: -34px;"><span style="color: #0974a5;">CLOUD</span> <span style="color:#ee7d4a;">STORE</span></h1>
+                                            <h1 style="margin-left: -34px;"><span style="color: #0974a5;">CLOUD</span> <span style="color:#ee7d4a;">STORES</span></h1>
                                             <h2>Your trusted online shopping center</h2>
                                             <p> </p>
                                             <button type="button" class="btn btn-default get"  onclick="redirec()"> Shop now</button>
@@ -38,7 +46,7 @@
                                     </div>
                                     <div class="item secondanimation">
                                         <div class="col-sm-6 slider-text">
-                                            <h1  style="margin-left: -34px;"><span style="color: #0974a5;">CLOUD</span> <span style="color:#ee7d4a;">STORE</span></h1>
+                                            <h1  style="margin-left: -34px;"><span style="color: #0974a5;">CLOUD</span> <span style="color:#ee7d4a;">STORES</span></h1>
                                             <h2>Your trusted online shopping center</h2>
                                             <p> </p>
                                             <button type="button" class="btn btn-default get" onclick="redirec()"> Shop now</button>
@@ -51,7 +59,7 @@
 
                                     <div class="item thirdanimation">
                                         <div class="col-sm-6 slider-text">
-                                            <h1  style="margin-left: -34px;"><span style="color: #0974a5;">CLOUD</span> <span style="color:#ee7d4a;">STORE</span></h1>
+                                            <h1  style="margin-left: -34px;"><span style="color: #0974a5;">CLOUD</span> <span style="color:#ee7d4a;">STORES</span></h1>
                                             <h2>Your trusted online shopping center</h2>
                                             <p> </p>
                                             <button type="button" class="btn btn-default get" onclick="redirec()"> Shop now</button>
@@ -78,15 +86,8 @@
             </section><!--/slider-->
         </div>
 
-        <div class="col-12-sm" style=" color: #696763;  margin-top: -5%;">
-            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeCategories })
-            <div class="category-nav-">
-                @await Component.InvokeAsync("CategoryNavigation")
-            </div>
 
-
-
-
+        <div class="" style=" color: #696763;  margin-top: -5%;">
 
             <div class="featured-products-class">
                 @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeProducts })
@@ -113,4 +114,35 @@
     function redirec() {
         window.location = "@Url.RouteUrl("NewProducts")";
     }
+
+    function expandList() {
+        var item_grid = document.getElementsByClassName("item-grid");
+
+        for (itemGrid of item_grid) {
+            
+            var itemGridChildren = itemGrid.children
+            for (item of itemGridChildren) {
+                item.setAttribute("style", "display: bloack")
+            }
+        }
+
+        var featuredProductsShowMoreElement = document.getElementById("featured_products_show_more");
+        featuredProductsShowMoreElement.style = "display: none"
+    }
+
+    function trimList() {
+        var itemGrid = document.getElementById("featured_products");
+        var itemGridChildren = itemGrid.children
+        var count = 0
+
+        for (item of itemGridChildren) {
+            count++
+
+            if (count > 3) {
+                item.setAttribute("style", "display: none")
+            }
+        }
+    }
+
+    trimList()
 </script>

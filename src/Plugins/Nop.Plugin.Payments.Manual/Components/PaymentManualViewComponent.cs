@@ -18,10 +18,9 @@ namespace Nop.Plugin.Payments.Manual.Components
             {
                 CreditCardTypes = new List<SelectListItem>
                 {
-                    new SelectListItem { Text = "Airtel Money", Value = "AirtelMoney" },
-                    new SelectListItem { Text = "TNM Mpamba", Value = "TNMMpamba" },
-                    new SelectListItem { Text = "Mo626", Value = "Mo626" },
-                    new SelectListItem { Text = "Other", Value = "Other" },
+                   // new SelectListItem { Text = "Airtel Money", Value = "AirtelMoney" },
+                    new SelectListItem { Text = "TNM Mpamba", Value = "TNMM pamba" },
+                    //new SelectListItem { Text = "Mo626", Value = "Mo626" },
                 }
             };
 
@@ -43,7 +42,7 @@ namespace Nop.Plugin.Payments.Manual.Components
             {
                 var form = Request.Form;
                 //model.CardholderName = form["CardholderName"];
-                model.CardNumber = form["CardNumber"];
+                //model.CardNumber = form["CardNumber"];
                 model.CardCode = form["CardCode"];
                 var selectedCcType = model.CreditCardTypes.FirstOrDefault(x => x.Value.Equals(form["CreditCardType"], StringComparison.InvariantCultureIgnoreCase));
                 if (selectedCcType != null)

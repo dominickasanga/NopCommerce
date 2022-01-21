@@ -5,29 +5,28 @@
 <table width="100%" cellspacing="2" cellpadding="1" border="0">
     <tr>
         <td>
-            <label asp-for="CreditCardTypes">@T("Payment.SelectCreditCard"):</label>
+            <label asp-for="CreditCardTypes">select mobile bank:</label>
         </td>
         <td>
             <select asp-for="CreditCardType" asp-items="Model.CreditCardTypes" class="dropdownlists"></select>
         </td>
     </tr>
-   
+
     <tr>
         <td>
-            <label asp-for="CardNumber">@T("Payment.CardNumber"):</label>
+            <label >send to:</label>
         </td>
         <td>
-            <input type="text" asp-for="CardNumber" style="width:165px;" autocomplete="off" maxlength="22" />
-            <span asp-validation-for="CardNumber"></span>
+            <label style="font-weight: bold;">0887 36 66 45</label>
         </td>
     </tr>
-  
+
     <tr>
         <td>
-            <label asp-for="CardCode">@T("Payment.CardCode"):</label>
+            <label asp-for="CardCode">enter Ref number:</label>
         </td>
         <td>
-            <input type="text" asp-for="CardCode" style="width:60px;" autocomplete="off"  />
+            <input type="text" asp-for="CardCode" style="width:240px !important;" autocomplete="off" maxlength="22" />
             <span asp-validation-for="CardCode"></span>
         </td>
     </tr>

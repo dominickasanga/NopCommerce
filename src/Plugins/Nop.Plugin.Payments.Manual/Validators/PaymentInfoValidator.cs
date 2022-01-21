@@ -18,8 +18,8 @@ namespace Nop.Plugin.Payments.Manual.Validators
             //RuleFor(x => x.CardCode).NotEmpty().WithMessage(localizationService.GetResource("Payment.CardCode.Required"));
 
             //RuleFor(x => x.CardholderName).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.CardholderName.Required"));
-            RuleFor(x => x.CardNumber).IsCreditCard().WithMessageAwait(localizationService.GetResourceAsync("Payment.CardNumber.Wrong"));
-            RuleFor(x => x.CardCode).Matches(@"^[0-9]{3,4}$").WithMessageAwait(localizationService.GetResourceAsync("Payment.CardCode.Wrong"));
+            //RuleFor(x => x.CardNumber).Matches(@"^[0-9]{10}$").WithMessageAwait(localizationService.GetResourceAsync("Payment.CardNumber.Wrong"));
+            RuleFor(x => x.CardCode).Matches(@"^(?=[a-zA-Z0-9]*$)(?=\d+[a-zA-Z]|[a-zA-Z]+\d)([a-zA-Z\d]){10}$").WithMessageAwait(localizationService.GetResourceAsync("Payment.CardCode.Wrong"));
             //RuleFor(x => x.ExpireMonth).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.ExpireMonth.Required"));
            // RuleFor(x => x.ExpireYear).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.ExpireYear.Required"));
           /*  RuleFor(x => x.ExpireMonth).Must((x, context) =>
