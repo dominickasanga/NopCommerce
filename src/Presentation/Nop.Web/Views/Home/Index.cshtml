@@ -116,16 +116,13 @@
     }
 
     function expandList() {
-        var item_grid = document.getElementsByClassName("item-grid");
+        var itemGrid = document.getElementById("featured_products");
+        var itemGridChildren = itemGrid.children
 
-        for (itemGrid of item_grid) {
-            
-            var itemGridChildren = itemGrid.children
-            for (item of itemGridChildren) {
-                item.setAttribute("style", "display: bloack")
-            }
+        for (item of itemGridChildren) {
+            item.setAttribute("style", "display: bloack")
         }
-
+        
         var featuredProductsShowMoreElement = document.getElementById("featured_products_show_more");
         featuredProductsShowMoreElement.style = "display: none"
     }
